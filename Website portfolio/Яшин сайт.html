@@ -127,6 +127,8 @@
         .service-item:hover .icon{transform:scale(1.15) rotate(-6deg)}
         .service-item h3{font-size:1.15rem;margin-bottom:6px;position:relative;z-index:1}
         .service-item p{color:var(--muted);font-size:.9rem;position:relative;z-index:1}
+        /* Новый стиль для цены в услугах */
+        .service-item .price{font-weight:700;color:var(--violet);font-size:1rem;margin-top:8px;display:block;letter-spacing:.5px}
 
         .portfolio-card{background:var(--card);border-radius:24px;overflow:hidden;border:1px solid var(--border);transition:.35s;text-decoration:none;color:inherit;display:block;cursor:pointer}
         .portfolio-card:hover{transform:scale(1.02);border-color:var(--violet);box-shadow:0 16px 48px rgba(0,0,0,0.5)}
@@ -465,7 +467,7 @@
     </section>
 
     <!-- ============================================================
-    УСЛУГИ
+    УСЛУГИ (добавлены цены)
     ============================================================ -->
     <section class="services" id="services">
         <div class="container">
@@ -476,21 +478,25 @@
                     <span class="icon">◈</span>
                     <h3 id="s1Title">Web Design</h3>
                     <p id="s1Desc">Figma, prototypes, adaptive, design systems, UI/UX.</p>
+                    <span class="price" id="s1Price">from $400</span>
                 </div>
                 <div class="service-item reveal reveal-d2" data-tilt>
                     <span class="icon">⌘</span>
                     <h3 id="s2Title">Frontend</h3>
                     <p id="s2Desc">HTML/CSS markup, adaptive, cross-browser. Basic JS.</p>
+                    <span class="price" id="s2Price">from $500</span>
                 </div>
                 <div class="service-item reveal reveal-d3" data-tilt>
                     <span class="icon">✦</span>
                     <h3 id="s3Title">Graphics</h3>
                     <p id="s3Desc">Logos, identity, business cards, banners, retouching.</p>
+                    <span class="price" id="s3Price">from $200</span>
                 </div>
                 <div class="service-item reveal reveal-d4" data-tilt>
                     <span class="icon">⬡</span>
                     <h3 id="s4Title">3D & Motion</h3>
                     <p id="s4Desc">Blender, basic editing, presentations, teasers.</p>
+                    <span class="price" id="s4Price">from $300</span>
                 </div>
             </div>
         </div>
@@ -1428,7 +1434,7 @@
     </script>
 
     <!-- ============================================================
-    ОСНОВНОЙ JS (с обновлёнными переводами)
+    ОСНОВНОЙ JS (с обновлёнными переводами, включая цены услуг)
     ============================================================ -->
     <script>
         // ============================================================
@@ -2258,7 +2264,7 @@
         });
 
         // ============================================================
-        // 16. ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА (добавлены переводы для секции Process)
+        // 16. ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА (добавлены цены услуг)
         // ============================================================
         const translations = {
             en: {
@@ -2277,12 +2283,16 @@
                 servicesTitle: 'Skills & Services',
                 s1Title: 'Web Design',
                 s1Desc: 'Figma, prototypes, adaptive, design systems, UI/UX.',
+                s1Price: 'from $400',
                 s2Title: 'Frontend',
                 s2Desc: 'HTML/CSS markup, adaptive, cross-browser. Basic JS.',
+                s2Price: 'from $500',
                 s3Title: 'Graphics',
                 s3Desc: 'Logos, identity, business cards, banners, retouching.',
+                s3Price: 'from $200',
                 s4Title: '3D & Motion',
                 s4Desc: 'Blender, basic editing, presentations, teasers.',
+                s4Price: 'from $300',
                 portfolioTag: 'portfolio',
                 portfolioTitle: 'Featured Projects',
                 p1Badge: 'logo',
@@ -2403,12 +2413,16 @@
                 servicesTitle: 'Навыки и услуги',
                 s1Title: 'Веб-дизайн',
                 s1Desc: 'Figma, прототипы, адаптив, дизайн-системы, UI/UX.',
+                s1Price: 'от $400',
                 s2Title: 'Frontend',
                 s2Desc: 'Вёрстка HTML/CSS, адаптив, кросс-браузерность. Начальный JS.',
+                s2Price: 'от $500',
                 s3Title: 'Графика',
                 s3Desc: 'Логотипы, айдентика, визитки, баннеры, ретушь.',
+                s3Price: 'от $200',
                 s4Title: '3D & Motion',
                 s4Desc: 'Blender, базовый монтаж, презентации, тизеры.',
+                s4Price: 'от $300',
                 portfolioTag: 'портфолио',
                 portfolioTitle: 'Избранные проекты',
                 p1Badge: 'логотип',
@@ -2536,12 +2550,16 @@
             document.getElementById('servicesTitle').textContent = t.servicesTitle;
             document.getElementById('s1Title').textContent = t.s1Title;
             document.getElementById('s1Desc').textContent = t.s1Desc;
+            document.getElementById('s1Price').textContent = t.s1Price;
             document.getElementById('s2Title').textContent = t.s2Title;
             document.getElementById('s2Desc').textContent = t.s2Desc;
+            document.getElementById('s2Price').textContent = t.s2Price;
             document.getElementById('s3Title').textContent = t.s3Title;
             document.getElementById('s3Desc').textContent = t.s3Desc;
+            document.getElementById('s3Price').textContent = t.s3Price;
             document.getElementById('s4Title').textContent = t.s4Title;
             document.getElementById('s4Desc').textContent = t.s4Desc;
+            document.getElementById('s4Price').textContent = t.s4Price;
 
             document.getElementById('portfolioTag').textContent = t.portfolioTag;
             document.getElementById('portfolioTitle').textContent = t.portfolioTitle;
